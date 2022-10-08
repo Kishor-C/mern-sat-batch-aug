@@ -1,0 +1,19 @@
+.heading {
+    color: blue;
+}
+.intro {
+    color: red;
+}
+@media (max-width: 1024px) and (min-width: 720px) {
+    .heading { 
+        background-color: yellow;
+    }
+    .intro { 
+        background-color: cadetblue;
+    }
+}
+@media print {
+    * {
+        color: black;
+    }
+}

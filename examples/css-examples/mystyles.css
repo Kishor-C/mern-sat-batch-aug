@@ -1,0 +1,21 @@
+.box { 
+    display: inline-block; width: 100px; height: 100px;
+    border: 2px black solid; animation: change 2s infinite alternate; 
+}
+.wheels { 
+    display: inline-block; margin-left: 200px;
+    margin-top: 150px; width: 100px; height: 100px; 
+    border: 2px black solid;
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes change { 
+    0% { border-radius: 0 0 0 0; background-color: yellow; }
+    25% { border-radius: 50% 0 0 0; }
+    50% { border-radius: 50% 50% 0 0;}
+    75% { border-radius: 50% 50% 50% 0 ;}
+    100% { border-radius: 50% 50% 50% 50%; background-color: green;}
+} 
