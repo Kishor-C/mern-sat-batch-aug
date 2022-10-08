@@ -1,0 +1,19 @@
+body {
+    display: flex;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 2px solid;
+}
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+}
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+}

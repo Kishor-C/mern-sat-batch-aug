@@ -1,0 +1,16 @@
+.intro {
+    text-align: center;
+    color: red;
+}
+.sub-heading {
+    color: blue;
+}
+h1::before {
+    content: open-quote;
+}
+h1::after {
+    content: close-quote;
+}
+h2::after {
+    content: ':-'
+}
