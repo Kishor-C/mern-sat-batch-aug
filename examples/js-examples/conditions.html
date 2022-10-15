@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Conditional Statements</h2>
+    <script type = "text/javascript">
+        var marks = prompt("Enter marks:");
+        if(marks >= 70) {
+            document.write("marks is "+marks+", so  grade is A+");
+        } else if (marks < 70 && marks >= 60) {
+            document.write("marks is " +marks+", so grade is A");
+        } else if (marks < 60 && marks >= 50) {
+            document.write("marks is "+marks+" so grade is B");
+        } else {
+            document.write("marks is "+marks+" so grade is C")
+        }
+        var x = prompt("Enter x");
+        var y = prompt("Enter y");
+        var z = parseInt(x) + parseInt(y);
+        document.write("<p>z = "+z+"</p>");
+    </script>
+</body>
+</html>
