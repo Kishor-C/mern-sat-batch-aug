@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var role = prompt("Enter your role");
+        var salary = parseFloat(prompt("Enter your salary"));
+        if(role == "Manager") {
+            salary = salary + (salary * 0.2); 
+        } else if (role == "Programmer") {
+            salary = salary + (salary * 0.15);
+        } else if (role == "Tester") {
+            salary = salary + (salary * 0.1);
+        } else {
+            salary = salary + (salary * 0.05);
+        }
+        document.write("<p>Role = "+role+", salary = "+salary+"</p>");
+    </script>
+</body>
+</html>
