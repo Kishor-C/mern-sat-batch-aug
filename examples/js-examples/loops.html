@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops in Javascript</h1>
+    <script type = "text/javascript">
+        fruits = ["apple", "mango", "grapes", "kiwi", "orange", "pine"];
+        document.write("<p>Size = "+fruits.length+"</p>");
+        for(var i = 0; i < fruits.length; i++) {
+            document.write("<p>fruit = "+fruits[i]+"</p>");
+        }
+        document.write("<p>___________________</p>");
+        var c = 0;
+        while(c < 5) {
+            document.write("<p>c = "+c+"</p>");
+            c++;
+        }
+        document.write("<p>______________________</p>");
+        var x = 0;
+        do {
+            document.write("<p>x = "+x+"</p>");
+            x++;
+        } while(x > 5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Functions with return types</h2>
+    <script type = "text/javascript">
+        function add(x, y) {
+            var result = x + y;
+            return result;
+        }
+        // caller can use the result for any other operation
+        var r = add(20, 30);
+        // you can use r for any other operations
+        r = r / 10;
+        document.write("<p>Result after / 10 = "+r+"</p>");
+    </script>
+</body>
+</html>

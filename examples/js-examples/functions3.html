@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Constructor Functions</h2>
+    <script type = "text/javascript">
+        // one way of creating object is obj = {property:value}
+        // another way is to create constructor function 
+        function Employee(x, y, z) {
+            this.id = x;
+            this.name = y;
+            this.age = z;
+        }
+        var e1 = new Employee(123, "Sachin", 45);
+        var e2 = new Employee(345, "Sourav", 48);
+        document.write("<p>"+e1.id+" "+e1.name+" "+e1.age+"</p>");
+        document.write("<p>"+e2.id+" "+e2.name+" "+e2.age+"</p>");
+    </script>
+</body>
+</html>

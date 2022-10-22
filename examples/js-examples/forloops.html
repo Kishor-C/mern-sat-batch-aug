@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>For, For-In, For-Of</h1>
+    <script type = "text/javascript">
+        // for 
+        for(var i = 0; i <= 2; i++) {
+            document.write("<p>i = "+i+"</p>");
+        }
+        document.write("____________________________");
+        employee = {id: 125, name: "Sachin", age: 40};
+        // for-in: used to iterate object properties
+        for(var i in employee) {
+            document.write("<p>"+i+" = "+employee[i]+"</p>");
+        }
+        // for-of: used to iterate arrays without condition
+        items = ["apple", "mango", "grapes"];
+        document.write("_____________________________");
+        for(var f of items) {
+            document.write("<p>f = "+f+"</p>");
+            // don't use items[f]
+        }
+    </script>
+</body>
+</html>
