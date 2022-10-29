@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        for(var x = 0; x < 2; x++) {
+            var y = 35;
+            let z = 40;
+            const a = 45;
+            z = 77;
+            //a = 80;
+            document.write("<p> x = "+x+", window y = "+window.y+", z = "+window.z+", a = "+a+"</p>")
+        }
+        window.document.write("<p>outside the for loop</p>");
+        document.write("<p>window y = "+window.y+"</p>");
+        document.write("<p> a = "+a+"</p>");
+
+    </script>
+</body>
+</html>

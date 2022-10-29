@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        let items = [10, 20, 30, 40];
+        // suppose you want to assign each item to separate variables
+        let a = items[0]; 
+        let b = items[1];
+        let c = items[2];
+        let d = items[3];
+        console.log(`a = ${a}, b = ${b}, c = ${c}, d = ${d}`);
+        // array destructuring syntax
+        let [x, y, z, zz] = items;
+        console.log(`x = ${x}, y = ${y}, z = ${z}, zz = ${zz}`);
+        // object destructuring syntax
+        let emp = {id: 100, name: "Rajesh", salary: 35000.88998};
+        let {id, name, salary} = emp;
+        // you can avoid writing let id = emp.id; let name = emp.name;
+        console.log(`Id = ${id}, Name = ${name}, Salary = ${salary}`);
+    </script>
+</body>
+</html>

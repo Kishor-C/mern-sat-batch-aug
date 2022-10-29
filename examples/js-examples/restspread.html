@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function test(a, ...b) {
+            console.log(`a = ${a}, b = ${b}`)
+        }
+        function sum(...a) {
+            let r = 0;
+            a.forEach((item, index) => r = r + item);
+            console.log(`Sum = ${r}`);
+        }
+        function hello(x, y) {
+            console.log(`x = ${x}, y = ${y}`);
+        }
+        let arr = [20, 30];
+        hello(...arr); // spread operator
+        test(20, 30);
+        test(100);
+        test(6, 7, 8, 10, 15);
+        test(300, 400, 500);
+        sum(1,2,3,4);
+    </script>
+</body>
+</html>

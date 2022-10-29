@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = 'text/javascript'>
+        let items = [10, 20, 30, 40];
+        // to iterate you can use for loop
+        for(let i = 0; i <= items.length; i++) {
+            console.log("item = "+items[i]);
+        }
+        // to iterate you can use for of
+        for(let i of items) {
+            console.log("items = "+i);
+        }
+        // to iterate you can use forEach function on arrays
+        // forEach calls the callback on each iteration by passing
+        // iterated item to the 1st arg & index to the 2nd arg
+        let sum = 0;
+        items.forEach(function(item, index) { 
+            sum = sum + item;
+            console.log("item = "+item+", index = "+index);
+        });
+        console.log("sum = "+sum);
+        console.log("items = "+items);
+        // array.map() it returns a new array
+        let items2 = items.map(function(item, index) { 
+            return item + 2;
+        });
+        console.log("items2 = "+items2);
+        console.log("----------------");
+        items.forEach( (item, index) => console.log("item = "+item+", index = "+index));
+        console.log("---arrow function when you have two or more lines---")
+        items.forEach((item, index) => { 
+            sum = sum + item;
+            console.log("sum = "+sum);
+        });
+        console.log("---arrow function in map---");
+        let items3 = items.map((item, index) => item * 10); // returns item * 10
+        console.log("items3 = "+items3);
+        console.log("---arrow function with return keyword--");
+        let items4 = items.map((item, index) => { 
+            console.log("Item in map = "+item);
+            return item * 3;
+        } );
+        console.log("Items4 = "+items4);
+        console.log(`Items4 = ${items4}`); //'quote' and `back tick`
+        items.forEach((item, index) => console.log(`Item = ${item}, Index = ${index}`));
+        console.log(`10 + 20 = ${10 + 20}`);
+    </script>
+</body>
+</html>

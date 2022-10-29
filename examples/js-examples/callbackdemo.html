@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function test() {
+            console.log("test() is called");
+        }
+        test();
+        console.log("hello everyone")
+        // setTimeout is an inbuilt function in javascript
+        // it takes 2 arguments, 1st is callback, 2nd is time in ms
+        setTimeout(function() { 
+            console.log("hello all is inside callback")
+        }, 0);
+        console.log("thank you");
+    </script>
+</body>
+</html>
