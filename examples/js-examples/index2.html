@@ -6,23 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div id = "d1">Hello World</div>
+    <div id = "i1"></div>
+    <div id = "d1"><span id = "s1"></span>Hello World</div>
     <div>
         <button onclick = "demo()">MyButton</button>
     </div>
     <script type = "text/javascript">
-        function demo() {
-           // to access the element use document.getElementById("d1");
-           let ele = document.getElementById("d1");
-        //    console.log(ele);
-        //    console.log(ele.innerHTML);
-           ele.innerHTML = '<h1>Hello World, I am updating...</h1>';
-           // ele.innerTex = '<h1>Hello World, I am updating...</h1>'
-           // adding style attribute to the element
-           ele.style.color = 'blue';
-           // above code modifies div to <div style = 'color:blue'>
-           
-        }
+       function demo() {
+           let ele = document.getElementById('s1');
+           ele.innerHTML = 'Content part of div#????i1'
+       }
     </script>
 </body>
 </html>
