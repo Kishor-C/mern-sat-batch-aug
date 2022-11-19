@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Demo on accessing backend data</h2>
+    <div>
+        <button onclick = "getData()">Load</button>
+    </div>
+    <div id = "d1"></div>
+    <script type = "text/javascript">
+        function getData() {
+            // access element d1
+            let ele = document.getElementById('d1');
+            // create object of XMLHttpRequest
+            let xhr = new XMLHttpRequest();
+            // initialize the request
+            xhr.open("get", "https://jsonplaceholder.typicode.com/users");
+            // sending the request
+            xhr.send(); // through request is sent, response wouldn't be available immediately
+            // using callback perform asynchrnous operation
+            xhr.onreadystatechange = () => {
+                // if resopnse is ready
+                if(xhr.readyState == 4) {
+                    // extract the data
+                    let res = xhr.responseText;
+                    // convert JSON to Javascript
+                    let js = JSON.parse(res);
+                    //ele.innerHTML = `<p>Username = ${js[0].username}, Id = ${js[0].id}</p>`;
+                    for(let i = 0; i < js.length; i++) {
+                        ele.innerHTML += `<p>Username = ${js[i].username}, Id = ${js[i].id}</p>`;
+                    }
+                    // you must concatenate previous data to the new iterated data
+                }
+            }
+        }
+    </script>
+</body>
+</html>
