@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let exp = /[a-zA-Z0-9]/; // your expression matches all the letters in lowercase
+        let found = exp.test('b');
+        console.log(found);
+        found = exp.test('z');
+        console.log(found);
+        found = exp.test('8');
+        console.log(found);
+        found = exp.test('A');
+        console.log(found);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Generator Example</h2>
+    <script>
+        function* test() {
+            console.log('first line');
+            yield "hello";
+            console.log('second line');
+            yield 20;
+            console.log('third line');
+            yield 30;
+        }
+        let g = test();
+        let r = g.next(); // next() returns an object { value: someValue, done: booleanValue }
+        console.log(`Value = ${r.value}, Done = ${r.done}`);
+        r = g.next();
+        console.log(`Value = ${r.value}, Done = ${r.done}`);
+        r = g.next();
+        console.log(`Value = ${r.value}, Done = ${r.done}`);
+        r = g.next();
+        console.log(`Value = ${r.value}, Done = ${r.done}`);
+        
+    </script>
+</body>
+</html>

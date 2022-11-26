@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        async function test() {
+            let p = new Promise( (resolve, reject) => {
+                let r = Math.random();
+                if(r > 0.5) {
+                    resolve(`Resolved with ${r}`)
+                } else {
+                    reject(`Reject with ${r}`);
+                }
+            } );
+            
+            let x = p.then(d => console.log(d)).catch(e => console.log(e));
+            // below code executes before the data is avaiable from the promise
+            console.log('using some data after promise returns '+x);
+            let y = await p; // it creates a promise and waits of the promise response
+            console.log(`Data from promise ${y}`);
+        }
+        test();
+    </script>
+</body>
+</html>
