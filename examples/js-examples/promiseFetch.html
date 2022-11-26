@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "test()">Load</button>
+    <div id = "d1"></div>
+    <script type = "text/javascript">
+        function test() {
+            let p = new Promise((resolve, reject) => {
+            let r = Math.random();
+            // success if r is > 0.5
+            if(r > 0.5) {
+                resolve(`Success with r: ${r}`);
+            } 
+            // error if r is < 0.5
+            else {
+                reject(`Error with r: ${r}`);
+            }
+           });
+           
+           let ele = document.getElementById('d1');
+           p.then(d => ele.innerHTML = d).catch(e => ele.innerHTML = e)
+       }
+       
+    </script>
+</body>
+</html>

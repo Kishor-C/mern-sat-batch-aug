@@ -13,6 +13,7 @@
     <div id = "d1"></div>
     <script type = "text/javascript">
         function getData() {
+            
             // access element d1
             let ele = document.getElementById('d1');
             // create object of XMLHttpRequest
@@ -22,6 +23,7 @@
             // sending the request
             xhr.send(); // through request is sent, response wouldn't be available immediately
             // using callback perform asynchrnous operation
+            // xhr.onreadystatechange = function() { }
             xhr.onreadystatechange = () => {
                 // if resopnse is ready
                 if(xhr.readyState == 4) {
