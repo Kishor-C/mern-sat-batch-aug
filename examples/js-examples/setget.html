@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Understanding setters & getters</h2>
+    </div>
+    <div id = "d1"></div>
+    <script>
+        class User { 
+            constructor(name, gender) {
+                this.username = name;
+                this.gender = gender;
+            }
+            set name(n) {
+                console.log('____set name is called_____');
+                if(n == '') {
+                    throw Error('Name cannot be empty')
+                } else {
+                    this.username = n;
+                }
+            }
+            get name() {
+                console.log('___get name is called____')
+                if(this.gender == 'Male')
+                    return 'Mr. '+this.username;
+                else
+                    return 'Ms. '+this.username;
+            }
+        }
+        let u1 = new User('Sachin', 'Male');
+        let u2 = new User('Amrita', 'Female');
+        u1.name = 'Sachin Tendulkar'; // set name('Sachin Tendulkar')
+        u2.name = 'Amrit';
+        let ele = document.getElementById('d1');
+        ele.innerHTML = `Hello ${u1.name}, ${u2.name}`; // get name() is called
+    </script>
+</body>
+</html>
